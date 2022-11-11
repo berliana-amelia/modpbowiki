@@ -26,9 +26,7 @@ public class manusia{
 }
 
 /* 
-Untuk menggunakan seluruh isi dari class, maka diperlukan object yang akan memuat dan 
-mempresentasikan keseluruhan nilai dari class. 
-
+Untuk menggunakan seluruh isi dari class, maka diperlukan object yang akan memuat dan mempresentasikan keseluruhan nilai dari class. 
 Berikut merupakan penulisan dari deklarasi object : 
 */
 
