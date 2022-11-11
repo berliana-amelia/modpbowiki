@@ -20,7 +20,7 @@ class manusia{
         System.out.println("Warna Rambut : " + WarnaRambut);
         System.out.println("Umur : " + TampilUmur());
     }
-     int TampilUmur(){   // <--- Method dalam bentuk fungsi (dengan nilai kembalian)
+    int TampilUmur(){   // <--- Method dalam bentuk fungsi (dengan nilai kembalian)
         return Umur;
     }
 }
