@@ -1,3 +1,9 @@
+Pembahasan Materi :
+1. Definisi OOP
+2. Object dan Class
+3. Atribut
+4. Method
+
 # Apa itu Pemograman Berbasis Objek?
 **Pemograman berbasis objek** atau **_Object Oriented Programming_** adalah metode pemograman yang berorientasi pada objek. Metode ini dibuat untuk menyediakan kebutuhan pengembangan program yang semakin hari semakin kompleks. Salah satu kekompleksan dari kebutuhan pengembangan program adalah kebutuhan untuk menyimpan beberapa jenis data dan fungsi secara bersamaan dalam satu variabel. Kekompleksan tersebut tidak dapat dipenuhi oleh **tipe data primitve** yang hanya mengizinkan satu variabel mempunyai satu tipe data saja, dan **struct** yang mampu menyimpan beberapa jenis tipe data, namun tidak mampu dalam menyimpan fungsi. 
 
