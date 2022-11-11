@@ -12,6 +12,7 @@ public class Pertama {
 ``````
 Pada kode program di atas, ketika mendeklarasikan object maka akan dituliskan `NamaObject()`, penulisan tersebut merupakan pemanggilan method constructor yang bertujuan untuk melakukan pemberian nilai awal. Java secara default membuat method constructor di dalam class meskipun tidak dituliskan, dan secara otomatis memberikan nilai `NULL` jika belum diberikan nilai pada atributnya. 
 
+# Penulisan Constructor
 Karena constructor merupakan sebuah method, maka dapat dilakukan perubahan/custom pada constructor. Berikut merupakan cara penulisan constructor :
 ``````Java
 class NamaClass{
@@ -57,3 +58,4 @@ public class NamaFile {
 }
 
 ````` 
+Dapat dilihat pada program di atas, bahwa penggunaan constructor dalam pemberian nilai lebih efisien dalam penulisannya.
