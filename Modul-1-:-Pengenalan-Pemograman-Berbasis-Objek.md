@@ -34,7 +34,7 @@ public class Pertama {
     public static void main(String[] args) {
         manusia MantanTerindah = new manusia(); // Struktur : NamaClass NamaObject = new NamaObject();
         manusia BismillahJodoh = new manusia();
-        // Pemanggilan Method
+        // Cara Memanggil Method : 
         MantanTerindah.TampilCiri();
         BismillahJodoh.TampilCiri();
     }
