@@ -10,7 +10,7 @@ Selain object, dalam _Object Oriented Programming_ juga dikenal **class**. Class
 # Penulisan Program
 Berikut merupakan contoh dari penulisan class dalam bahasa Java : 
 ``````Java
-public class manusia{
+class manusia{
     String WarnaRambut, WarnaKulit, Nama; // <--- Atribut (berupa variabel)
     int Umur;
     
