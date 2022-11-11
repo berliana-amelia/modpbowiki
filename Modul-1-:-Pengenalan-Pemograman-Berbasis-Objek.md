@@ -7,6 +7,7 @@ Selain object, dalam _Object Oriented Programming_ juga dikenal **class**. Class
 1. Atribut merupakan  nilai atau kumpulkan nilai yang dimiliki oleh class, mudahnya atribut dapat diilustrasikan sebagai ciri-ciri yang mempresentasikan karakteristik dari object. 
 2. Method merupakan perilaku dari object. Perilaku ini berupa statement program yang dituliskan dalam bentuk fungsi atau prosedur untuk melakukan pengolahan nilai atau tidak. Mudahnya **method** merupakan _function atau procedur_ yang dituliskan/dimiliki oleh class. 
 
+# Penulisan Program
 Berikut merupakan contoh dari penulisan class dalam bahasa Java : 
 ``````Java
 public class manusia{
@@ -32,8 +33,8 @@ Berikut merupakan penulisan dari deklarasi object :
 public class Pertama {
     public static void main(String[] args) {
         manusia MantanTerindah = new manusia(); // Struktur : NamaClass NamaObject = new NamaObject();
+        manusia BismillahJodoh = new manusia();
     }
 }
 ```````
-
-
+Dalam kode program di atas, terdapat object dengan nama MantanTerindah dan BismillahJodoh, dengan menggunakan class maka kedua object tersebut dapat memiliki atribut dan method atau ciri dan karateristik yang sama. Sehingga tidak perlu didefinisikan ciri dan karakteristik tersebut pada masing-masing object.
