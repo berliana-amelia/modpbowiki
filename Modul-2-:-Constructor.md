@@ -52,8 +52,9 @@ Penggunaan parameter dimungkinkan karena `constructor` merupakan method. Penggun
 public class NamaFile {
     public static void main(String[] args) {
        NamaClass NamaObject = new NamaObject(100,"Juned") // <-- Menggunakan Constructor
+    // Tanpa Menggunakan Constructor  
        NamaObject.Nilai = 100;
-       NamaObjet.Nama = "Juned" // <-- Tanpa Menggunakan Constructor       
+       NamaObjet.Nama = "Juned"   
     }
 }
 
