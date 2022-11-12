@@ -35,22 +35,20 @@ Berikut merupakan contoh implementasi `private access modifier` :
 class OverloadingClass{
     private int a; // <-- atribut a memiliki access modifier private
     int b;         // <-- atribut b memiliki access modifier default (tidak perlu ditulis)
-    OverloadingClass(int b){
-        a = 5;     // Kareana tidak dapat dilakukan pengaksesan di luar classnya sendiri, maka nilai atribut a kita deklarasikan secara default.
-        this.b = b;
-    }
 }
 
 public class Overloading {
     public static void main(String[] args) {
-        OverloadingClass ketiga = new OverloadingClass(2);
+        OverloadingClass ketiga = new OverloadingClass();
+        ketiga.b = 5;
+    //  ketiga.a = 1; // <-- Akan error
         System.out.println("Nilai B adalah : " + ketiga.b);
  /*     System.out.println("Nilai B adalah : " + ketiga.a); <-- Jika dijalankan akan error, karena atribut a memiliki access modifier berupa private, 
                                                                 sehingga tidak dapat dilakukan pengaksesan di luar classnya sendiri */ 
     }
 }
 `````` 
-Hal yang terjadi jika kita memaksa untuk melakukan pengaksesan secara langsung terhadap atribut dengan access modifier private adalah sebagai berikut : 
+Hal yang terjadi jika kita memaksa untuk melakukan pengaksesan secara langsung (input atau ouput) terhadap atribut dengan access modifier private adalah sebagai berikut : 
 ``````
 'a' has private access in 'Modul.OverloadingClass'
 ``````
