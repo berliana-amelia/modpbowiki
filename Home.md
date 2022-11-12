@@ -1,1 +1,1 @@
-Welcome to the ITTelkomSurabaya_PemogramanBerbasisObjek_Informatika wiki!
+Welcome to the Pemograman Berbasis Objek wiki!
