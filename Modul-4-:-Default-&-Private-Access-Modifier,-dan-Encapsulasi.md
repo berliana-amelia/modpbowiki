@@ -54,4 +54,5 @@ Hal yang terjadi jika kita memaksa untuk melakukan pengaksesan secara langsung t
 ``````
 'a' has private access in 'Modul.OverloadingClass'
 ``````
+Hal tersebut terjadi karena kita mencoba mengakses secara langsung atribut a di dalam **class Overloading** yang mana merupakan area di luar **OverloadingClass**.
 # Encapsulasi/Encapsulation
