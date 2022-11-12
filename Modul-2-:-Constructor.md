@@ -42,7 +42,8 @@ class NamaClass{
 }
 public class NamaFile {
     public static void main(String[] args) {
-       NamaClass NamaObject = new NamaObject(100,"Juned") // <-- nilai awal diisikan di dalam tanda kurung yang akan menjadi argumen menuju constructor       
+       NamaClass NamaObject = new NamaObject(100,"Juned") /* <-- nilai awal diisikan di dalam tanda kurung 
+                                                                 yang akan menjadi argumen menuju constructor. */       
     }
 }
 ``````
