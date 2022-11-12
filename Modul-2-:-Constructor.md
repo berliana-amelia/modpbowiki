@@ -17,7 +17,7 @@ Karena constructor merupakan sebuah method, maka dapat dilakukan perubahan/custo
 ``````Java
 class NamaClass{
    int nilai;
-// Deklarasi Constructor : Keywoard (opsional) NamaConstructor(Harus Sama dengan Nama Class) { Statement }
+// Deklarasi Constructor : Keywoard (opsional) NamaConstructor (Harus Sama dengan Nama Class) { Statement }
    NamaClass{
      nilai = 100; // <-- secara otomatis atribut nilai pada setiap object akan bernilai 100
    }
