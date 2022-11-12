@@ -8,7 +8,8 @@
 
 ![](https://usemynotes.com/wp-content/uploads/2021/02/what-are-access-specifiers-in-java.jpg)
 
-Namun, dalam modul kali ini hanya akan dibahas mengenai default dan private access modifier. Hal tersebut dikarenakan sifat dari access modifier lainnya tidak akan terlihat jika penulisan program masih dalam satu file yang sama. B
+Namun, dalam modul kali ini hanya akan dibahas mengenai default dan private access modifier. Hal tersebut dikarenakan sifat dari access modifier lainnya tidak akan terlihat jika penulisan program masih dalam satu file yang sama.
+
 Berikut merupakan contoh penulisan `access modifier` : 
 ``````Java
 class NamaClass{
@@ -17,7 +18,9 @@ class NamaClass{
 }
 ``````
 # Default Access Modifier
-Default access modifier adalah access modifier yang diberikan secara otomatis oleh Java, sehingga untuk menggunakan access modifier ini tidak perlu dilakukan penulisan access modifiernya di depan atribut atau methodnya. Contoh default access modifier : 
+Default access modifier adalah access modifier yang diberikan secara otomatis oleh Java, sehingga untuk menggunakan access modifier ini tidak perlu dilakukan penulisan access modifiernya di depan atribut atau methodnya. 
+
+Contoh default access modifier : 
 ``````Java
 class NamaClass{
       int a;
@@ -26,13 +29,14 @@ class NamaClass{
 Secara otomatis atribut a akan memiliki access modifier berupa `default`. Dengan itu atribut a dapat diakses diseluruh program dengan syarat masih dalam satu `package` yang sama.
 # Private Access Modifier
 `Private` access modifier adalah access modifier yang hanya mengizinkan pengaksesan secara langsung di dalam classnya saja, sehingga pengaksesan di luar classnya sendiri (satu package atau berbeda) akan dilarang atau tidak dapat dilakukan. 
+
 Berikut merupakan contoh implementasi `private access modifier` :  
 ``````Java
 class OverloadingClass{
     private int a; // <-- atribut a memiliki access modifier private
     int b;         // <-- atribut b memiliki access modifier default (tidak perlu ditulis)
     OverloadingClass(int b){
-        a = 5;
+        a = 5;     // Kareana tidak dapat dilakukan pengaksesan di luar classnya sendiri, maka nilai atribut a kita deklarasikan secara default.
         this.b = b;
     }
 }
