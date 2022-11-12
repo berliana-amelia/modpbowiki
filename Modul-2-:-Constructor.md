@@ -60,3 +60,29 @@ public class NamaFile {
 
 ````` 
 Dapat dilihat pada program di atas, bahwa penggunaan constructor dalam pemberian nilai lebih efisien dalam penulisannya.
+# This Keywoard
+`This` adalah keywoard yang merujuk kepada object yang sedang aktif saat itu atau object yang sedang dipanggil pada saat pemanggilan method. Penggunaan `this` seringkali digunakan untuk memberikan nilai object di dalam constructor, penggunaan this digunakan karena seringkali parameter constructor dituliskan mirip dengan nama atributnya, sehingga perlu diberi pembeda diantara keduanya. Berikut merupakan penggunaan `this` keywoard : 
+``````Java
+class NamaClass{
+   int nilai;
+   String nama
+   NamaClass(int nilai, String nama){
+/* Pada bagian ini atribut nilai dengan parameter nilai memiliki kesamaan nama, sehingga compiler perlu diberitau bahwa keduanya berbeda dengan 
+   menggunakan keywoard this, keyword this memberitau compiler bahwa nilai tersebut merujuk kepada atribut nilai milik object yang tengah dipanggil
+   bukan merujuk kepada parameter milik constructor */
+     this.nilai = nilai; 
+     this.nama = nama;
+   }
+// Contoh lain dari penggunaan this adalah sebagai berikut : 
+   NamaClass(){ // <-- hal ini disebut dengan overloading (penulisan 2 method yang sama dengan parameter yang berbeda)
+     this(100,"Sylphy"); /* <-- this akan merujuk pada object yang sedang aktif, 
+                                penulisan ini mirip dengan new NamaObject(); pada 
+                                class utama saat mendeklarasikan object baru */ 
+   }
+}
+public class NamaFile {
+    public static void main(String[] args) {
+       NamaClass NamaObject = new NamaObject(100,"Juned")     
+    }
+}
+``````
