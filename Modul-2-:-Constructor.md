@@ -1,7 +1,7 @@
 # Definisi Constructor
 Constructor merupakan salah satu method yang dimiliki oleh class pada Java. Method constructor digunakan untuk melakukan pemberian nilai awal kepada object yang dideklarasikan. Perhatikan contoh kode program di bawah :
 ``````Java
-Class NamaClass{
+class NamaClass{
    // Statement
 }
 public class Pertama {
