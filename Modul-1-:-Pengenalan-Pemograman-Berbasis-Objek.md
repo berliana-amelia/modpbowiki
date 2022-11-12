@@ -11,12 +11,13 @@ Pembahasan Materi :
 
 Selain object, dalam _Object Oriented Programming_ juga dikenal **class**. Class merupakan cetakan/template dari object dan object merupakan hasil cetakan atau wujud dari class. Berikut merupakan penulisan kode program dari deklarasi object dan class : 
 ``````Java
+// Penulisan Class :  class <NamaClass>
 class NamaClass{ // <-- Deklarasi Class (Class harus ada di atas class utama)
   // Statement
 }
 public class NamaFile{ // <-- Nama class pada class utama harus sama dengan nama fila (biasanya terisi otomatis ketika membuat file baru)
      public static void main(String[] args){
-     NamaClass NamaObject = new NamaClass(); // <-- Deklarasi Object
+     NamaClass NamaObject = new NamaClass(); // <-- Deklarasi Object <NamaClass> <NamaObject> = new <NamaClass>
      }
 }
 ``````
@@ -27,7 +28,7 @@ Atribut merupakan  nilai atau kumpulkan nilai yang dimiliki oleh dan dituliskan 
 ``````Java
 class NamaClass{ 
      // Deklarasi Atribut (seluruh atribut akan dimiliki oleh tiap object yang dideklarasikan)
-     int nomor;
+     int nomor; // Penulisan atribut : <modifier> (opsional) <TipeData> <NamaAtribut>
      Char huruf;
      String Kalimat;
      float pecahan;
@@ -37,7 +38,7 @@ public class NamaFile{ // <-- Nama class pada class utama harus sama dengan nama
      public static void main(String[] args){
      NamaClass NamaObject = new NamaClass(); // <-- Deklarasi Object
 
-     // Untuk memberikan nilai terhadap atribut dapat dilakukan dengan cara berikut : NamaObject.NamaAtribut = Nilai
+     // Untuk memberikan nilai terhadap atribut dapat dilakukan dengan cara berikut : <NamaObject>.<NamaAtribut> = Nilai
      NamaObject.nomor = 1;
      NamaObject.huruf = 'a';
      NamaObject.Kalimat = "ini nilai";
@@ -51,6 +52,7 @@ Method merupakan perilaku dari object. Perilaku ini berupa statement program yan
 ``````Java
 class NamaClass{
    int nomor1,nomor2;
+// Penulisan method : <TipeData> <NamaMethod> (<TipeData Parameter> <NamaParameter (Opsional)){ <Statement> }
    void TampilkanNomor(){ // <--- Method dalam bentuk prosedur tanpa melakukan pengolahan data
       System.out.printf("Nomer 1 : %d dan Nomer 2 : %d\n",nomor1,nomor2);
    }
