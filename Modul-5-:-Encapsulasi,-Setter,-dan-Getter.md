@@ -12,16 +12,21 @@ Berikut contoh penulisan `setter method` :
 ``````Java
 class Mahasiswa{
     private int Nilai; 
-    private String Matkul;     
-    Mahasiswa(String Matkul, int Nilai){ // <-- Constructor merupakan setter, karena untuk melakukan akses pemberian nilai terhadap atribut haruslah melalui construcor
+    private String Matkul; 
+    
+    Mahasiswa(String Matkul, int Nilai){ /* <-- Constructor merupakan setter, karena untuk melakukan 
+                                                akses pemberian nilai terhadap atribut haruslah melalui construcor. */
         this.Nilai = Nilai;
         this.Matkul = Matkul;
     }
-    Mahasiswa(){};
+
+    Mahasiswa(){}; // <-- Constructor kedua (Overloading Constructor)
+
  // Selain melalui constructor, setter juga dapat melalui method biasa :
-    void SetterNilai(String Matkul,int Nilai) { // <-- Berikut merupakan method setter
+    void SetterNilai(String Matkul,int Nilai) { // <-- Berikut merupakan method setter.
+
  /* Atribut privat akan tetap diakses di dalam class melalui method setter dan method 
-    setter dapat diakses di luar class karena method setter tidak bersifat privat */
+    setter dapat diakses di luar class karena method setter tidak bersifat privat. */
         this.Nilai = Nilai;
         this.Matkul = Matkul;
     }
@@ -30,12 +35,14 @@ class Mahasiswa{
 public class RekapNilai {
     public static void main(String[] args) {
         Mahasiswa Windah = new Mahasiswa("Pemograman Berbasis Objek",100); // <-- Pemanggilan setter method berupa constructor.
+
     //  Dengan sifatnya yang private maka pemberian nilai tidak dapat dilakukan secara terpisah seperti di bawah ini : 
     //  Windah.Nilai = 5 // <-- Hal tersebut tidak memungkinkan, karena atribut nilai bersifat private dan pengaksesan tidak melalui setter.
+        
         Mahasiswa Basudara = new Mahasiswa();
     //  Setter menggunakan method SetterNilai : 
-        Basudara.SetterNilai("Perancangan Basis Data",100); // <-- Dengan menggunakan setter, maka pengaksesan atribut haruslah dilakukan secara 
-                                                                   bersamaan menyesuaikan dengan parameter setter yang dimiliki.
+        Basudara.SetterNilai("Perancangan Basis Data",100); /* <-- Dengan menggunakan setter, maka pengaksesan atribut haruslah dilakukan secara 
+                                                                   bersamaan menyesuaikan dengan parameter setter yang dimiliki. */
     }
 }
 ``````
@@ -57,11 +64,13 @@ class Mahasiswa{
         this.Nilai = Nilai;
         this.Matkul = Matkul;
     }
+
     void TampilkanData(){ // <-- Berikut merupakan getter method dengan aturan menampilkan kedua data sekaligus
         System.out.printf("Mata Kuliah : %s\nNilai : %d\n",this.Matkul,this.Nilai);
     }
-// Getter tidak terbatas dengan prosedur, fungsi juga dapat digunakan sebagai getter : 
-     int AmbilNilai(){ // Getter untuk mengambil nilai dari atribut nilai saja
+
+  // Getter tidak terbatas dengan prosedur, fungsi juga dapat digunakan sebagai getter : 
+     int AmbilNilai(){ // <-- Getter untuk mengambil nilai dari atribut nilai saja
         return this.Nilai;
     }
 }
@@ -72,14 +81,16 @@ public class RekapNilai {
         Mahasiswa Basudara = new Mahasiswa();
         Basudara.SetterNilai("Perancangan Basis Data",100);
         System.out.println("Windah : ");
-// Memanggil getter method : 
+
+//      Memanggil getter method : 
         Windah.TampilkanData();
         System.out.println("\nBasudara : ");
         Basudara.TampilkanData();
-        int NilainyaWindah = Windah.AmbilNilai(); // Karena terdapat return value maka diperlukan container untuk menampungnya
+        int NilainyaWindah = Windah.AmbilNilai(); // <-- Karena terdapat return value maka diperlukan container untuk menampungnya.
         System.out.println("Nilainya Windah : " + NilainyaWindah);
-// Memanggil tanpa melalui getter : 
-//       System.out.println("Nilainya Windah : " + Windah.Nilai); <--- Akan Error karena tidak diizinkan
+
+//       Memanggil tanpa melalui getter : 
+//       System.out.println("Nilainya Windah : " + Windah.Nilai); <--- Akan Error karena tidak diizinkan.
     }
 }
 `````` 
