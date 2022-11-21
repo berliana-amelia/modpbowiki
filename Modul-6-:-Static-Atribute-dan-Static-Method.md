@@ -83,3 +83,4 @@ BERUBAHHH!!!!
 BERUBAHHH!!!!
 ``````
 Dapat dilihat pada output di atas, perubahan pada static atribute melalui `ObjectSatu` berpengaruh pada seluruh object.
+# Static Method
