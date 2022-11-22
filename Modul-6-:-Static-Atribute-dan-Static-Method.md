@@ -82,5 +82,48 @@ BERUBAHHH!!!!
 BERUBAHHH!!!!
 BERUBAHHH!!!!
 ``````
-Dapat dilihat pada output di atas, perubahan pada static atribute melalui `ObjectSatu` berpengaruh pada seluruh object.
+
+Salah satu dari implementasi `Static Method` adalah kita dapat menghitung jumlah objek yang  telah dideklarasikan dengan menggunakan kode program seperti di bawah ini : 
+``````Java
+class StaticCourse{
+    static int hitungAtribut;
+    StaticCourse (){
+        StaticCourse.hitungAtribut++; // <-- Akan bertambah setiap constructor method dipanggil.
+    }
+}
+
+public class StaticMethodAndAtribute {
+    public static void main(String[] args) {
+        StaticCourse ObjectSatu = new StaticCourse();
+        StaticCourse Object_Dua = new StaticCourse();
+        System.out.printf("Jumlah objek yang telah dideklarasikan sejumlah : %d",StaticCourse.hitungAtribut);
+
+    }
+}
+
+``````
+Output : 
+``````
+Jumlah objek yang telah dideklarasikan sejumlah : 2
+``````
+Pada ouput di atas ketika melakukan pemanggilan `StaticCourse.hitungAtrubut` akan dihasilkan nilai 2. Hal tersebut dikarenakan pada setiap pemanggilan method constructor di deklarasi objek, hitungAtribut akan melakukan increment. Kemudian karena setiap perubahan pada `Static Atribute` nilainya melekat pada classnya, maka dihasilkan nilai 2.
 # Static Method
+Sama seperti static atribte, keyword `static` juga dapat diimplementasikan pada method. Untuk memberikan static pada method, dapat dilakukan melalui cara di bawah ini : 
+``````Java
+class StaticCourse{
+    static void tampil(){
+        System.out.println("Ini Static Method\n");
+    }
+}
+
+public class StaticMethodAndAtribute {
+    public static void main(String[] args) {
+        StaticCourse.tampil();
+    }
+}
+``````
+Output : 
+``````
+Ini Static Method
+``````
+Dapat dilihat pada kode program dan output di atas. Pada kode program tidak dilakukan deklarasi objek sama sekali. Namun pemanggilan method masih dapat dilakukan melalui classnya.
