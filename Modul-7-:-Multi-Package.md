@@ -50,7 +50,33 @@ public class Bear {
     }
 }
 ``````
-Pada kode program di atas package yang berisi **Class Main** dan **Class Bear** adalah `Tugas`. Oleh karena itu untuk menghubungkan antara **class main** dan **class bear** diperlukan penulisan 
+Pada kode program di atas package yang berisi **Class Main** dan **Class Bear** adalah `Tugas`. Oleh karena itu untuk menghubungkan antara **class main** dan **class bear** perlu dituliskan
 `````Java
 package Tugas
+``````
+
+# Multi Package
+Selain multi file, pada java juga memungkinkan untuk menghubungkan class yang terdapat pada package yang berbeda. 
+![image](https://user-images.githubusercontent.com/94579033/203199312-858fd85a-a7d6-46f4-bf00-9c86ee3f943c.png)
+Dapat dilihat pada gambar di atas, terdapat 2 package dengan nama **PackageSatu** dan **PackageDua** yang pada tiap-tiap packagenya berisi class. Kemudian kita dapat menggunakan class pada **PackageDua** di dalam main class di **PackageSatu**.
+``````Java
+package PackageSatu;
+import PackageDua.PackageDua;
+
+public class PackageSatu {
+    public static void main(String[] args) {
+         PackageDua baru = new PackageDua();
+         baru.Tampil();
+    }
+}
+``````
+Dapat dilihat pada kode program di atas, dilakukan deklarasi dengan class `PackageDua` yang mana class tersebut berada pada package yang berbeda dengan class `PackageSatu`. Berikut merupakan isi dari class PackageDua : 
+![image](https://user-images.githubusercontent.com/94579033/203199860-6b9da2c7-a0fc-4afe-8be1-41ce7274da85.png)
+Untuk menggunakan class pada PackageDua di PackageSatu, maka kita perlu menghubungkan kedua class yang berbeda package tersebut. Untuk menghubungkan keduanya, digunakan : 
+``````
+import PackageDua.PackageDua; // <-- import NamaPackage.NamaFile;
+``````
+Dengan menggunakan keyword `import` maka class di dalam class yang berbeda package dapat digunakan pada file class package lain. Berikut merupakan ouput dari kode program di atas : 
+``````
+ini package dua
 ``````
