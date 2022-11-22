@@ -1,5 +1,5 @@
 # Multi File
-Multi file adalah penulisan class pada file yang berbeda. Hal ini dilakukan guna membedakan satu class dengan class yang lain berdasarkan filenya. Keuntungan menggunakan multi file adalah kemudahan untuk menganalisa suatu error, memudahkan user untuk melakukan pengembangan atau perubahan terhadap suatu class. Dengan menggunakan multi file, class satu dengan class lain tidak akan tercampur tetapi masih saling berhubungan. Berikut merupakan bentuk penggunaan dari `Multi File` : 
+Multi file adalah penulisan class pada file yang berbeda. Hal ini dilakukan guna membedakan satu class dengan class yang lain berdasarkan filenya. Keuntungan menggunakan multi file adalah kemudahan untuk menganalisa suatu error, memudahkan user untuk melakukan pengembangan atau perubahan terhadap suatu class. Dengan menggunakan multi file, class satu dengan class lain tidak akan tercampur tetapi masih saling berhubungan. Berikut merupakan penggunaan dari `Multi File` : 
 
 ![image](https://user-images.githubusercontent.com/94579033/203195470-ca9b559b-9424-4563-aaf5-5ed29a79084d.png)
 
@@ -71,9 +71,11 @@ public class PackageSatu {
 }
 ``````
 Dapat dilihat pada kode program di atas, dilakukan deklarasi dengan class `PackageDua` yang mana class tersebut berada pada package yang berbeda dengan class `PackageSatu`. Berikut merupakan isi dari class PackageDua : 
+
 ![image](https://user-images.githubusercontent.com/94579033/203199860-6b9da2c7-a0fc-4afe-8be1-41ce7274da85.png)
+
 Untuk menggunakan class pada PackageDua di PackageSatu, maka kita perlu menghubungkan kedua class yang berbeda package tersebut. Untuk menghubungkan keduanya, digunakan : 
-``````
+``````Java
 import PackageDua.PackageDua; // <-- import NamaPackage.NamaFile;
 ``````
 Dengan menggunakan keyword `import` maka class di dalam class yang berbeda package dapat digunakan pada file class package lain. Berikut merupakan ouput dari kode program di atas : 
