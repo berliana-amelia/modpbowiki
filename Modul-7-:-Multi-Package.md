@@ -82,3 +82,6 @@ Dengan menggunakan keyword `import` maka class di dalam class yang berbeda packa
 ``````
 ini package dua
 ``````
+Namun perlu diingat bahwa untuk menggunakan multi package diperlukan access modifier public pada class dan isi dari classnya.
+
+![](https://usemynotes.com/wp-content/uploads/2021/02/what-are-access-specifiers-in-java.jpg)
