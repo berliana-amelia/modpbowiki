@@ -116,3 +116,111 @@ class exception {
     }
 }
 ``````
+
+# Throw
+Pada pembahasan sebelumnya telah dijelaskan bahwa terdapat banyak jenis dari error yang terjadi di Java. Selain itu, pada pemograman java kita dapat membuat exception atau error massage sendiri menyesuaikan dengan kondisi yang kita inginkan. Untuk melakukan hal tersebut maka digunakanlah keyword `Throw` dan exception yang dibuat sendiri disebut `user define exception`. 
+
+Untuk melakukan custom exception maka terdapat beberapa tahapan : 
+
+1. Buat class baru dengan nama exception yang diinginkan.
+   ``````Java
+    class AgeException extends Exception{
+        AgeException(String Massage){ // --> Constructor untuk membuat user define exception
+            super(Massage);
+        }
+    }
+   ``````
+   Disini akan dibuat user define exception dengan nama AgeException. 
+
+2. Buat fungsi atau method yang melakukan pengecekan terhadap kondisi yang dijadikan sebagai kondisi yang akan menghasilkan error tersebut.
+   ``````Java
+   static void AgeCheck(int age) throws AgeException{ // --> Pada method diberikan throws kepada class exceptionnya
+        if(age < 18){
+            throw new AgeException("\nUmur tidak mencukupi"); // --> throw deklarasi object exception
+        }else{
+            System.out.println("Anda berhasil login");
+        }
+    }
+   ``````
+   Disini terdapat sebuah method dengan nama AgeCheck yang akan melakukan pengecekan terhadap nilai parameter age. Kondisi yang menghasilkan error disini 
+   adalah jika `age < 18`.
+
+3. Buat Main Program dengan Try - Checknya.
+   ``````Java
+   public static void main(String[] args) {
+        Scanner inputan = new Scanner(System.in);
+        System.out.println("Masukkan Umur : ");
+        int Umur = inputan.nextInt();
+
+        try{
+            AgeCheck(Umur);
+        }catch (Exception e){
+            System.err.println(e);
+        }finally {
+            System.out.println("\nTerimakasih");
+        }
+   }
+   ``````
+
+Berikut merupakan full program dari program di atas : 
+``````Java
+package TryExcept;
+
+import java.util.Scanner;
+
+class AgeException extends Exception{
+    AgeException(String Massage){
+        super(Massage);
+    }
+}
+
+public class Throws {
+    static void AgeCheck(int age) throws AgeException{
+        if(age < 18){
+            throw new AgeException("\nUmur tidak mencukupi");
+        }else{
+            System.out.println("Anda berhasil login");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner inputan = new Scanner(System.in);
+        System.out.println("Masukkan Umur : ");
+        int Umur = inputan.nextInt();
+
+        try{
+            AgeCheck(Umur);
+        }catch (Exception e){
+            System.err.println(e);
+        }finally {
+            System.out.println("\nTerimakasih");
+        }
+    }
+}
+
+``````
+
+Berikut merupakan output dari program di atas : 
+
+Input 1 : 
+``````
+Masukkan Umur : 
+5
+``````
+Output 1 :
+``````
+TryExcept.AgeException: 
+Umur tidak mencukupi
+
+Terimakasih
+``````
+Input 2 :
+``````
+Masukkan Umur : 
+20
+``````
+Output 2 : 
+``````
+Anda berhasil login
+
+Terimakasih
+``````
