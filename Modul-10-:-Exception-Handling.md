@@ -75,3 +75,44 @@ class exception {
 }
 ``````
 Pada program di atas, terdapat 2 cath. Jika kita memasukkan indeks yang benar maka catch kedua akan dieksekusi karena error pada catch pertama tidak terjadi. Namun, jika error pada catch pertama juga terjadi, maka hanya catch pertama yang dijalankan dan catch kedua tidak meskipun error pada catch kedua juga terjadi.
+
+# Finally 
+`Finally` merupakan keyword yang menyediakan block program yang akan selalu dijalankan setelah `try` dan `catch` dijalankan terlepas dari terjadi atau tidaknya error di dalam `try - catch`. 
+
+Berikut merupakan contoh implementasi dari `finally` : 
+``````Java
+import java.util.Scanner;
+
+class exception {
+    public static void main(String[] args) {
+        int[] angka = { 1, 2, 3, 4, 5 };
+        Scanner inputan = new Scanner(System.in);
+        try {
+            System.out.println("Masukkan indeks : ");
+            int indeks = inputan.nextInt();
+            System.out.printf("Nilai indeks ke -%d adalah %d : ", indeks, angka[indeks]);
+            int a = 1 / 0;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e);
+        } catch (ArithmeticException e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("Terimakasih telah menggunakan program kami"); // Akan dioutputkan ketika try - catch selesai dijalankan
+        }
+    }
+}
+``````
+Contoh lain dari Finally : 
+``````Java
+class exception {
+    public static void main(String[] args) {
+        try {
+            int a = 1 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("Terimakasih telah menggunakan program kami");
+        }
+    }
+}
+``````
