@@ -1,5 +1,5 @@
 Pembahasan Materi :
-1. Definisi OOP
+1. Definisi OOP [[First Note]]
 2. Object dan Class
 3. Atribut
 4. Method
